@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+// Example uri endpoints
+uris=[
+"/values?limit=10",
+"/values/since/2015-12-14T17:25:24.171Z",
+"/users?limit=1",
+"/sensors",
+"/sensors?limit=1",
+"/users",
+"/values"
+];
+
+// Server IP address
+var ip='http://128.2.20.131:50000';
+var reqs={};
+
+
+// 4 steps to get api data
+//    Create the request obj  -> new XMLHttpRequest();
+//    Point to api url        -> xmlhttp.open("GET", url, true);
+//    Send the request        -> xmlhttp.send();
+//    Create response handler -> .onreadystatechange = function() {...
+
+
+// Creates a requiest for each of the uris above 
+uris.forEach(function(uri,i){
+    reqs[uri]=new XMLHttpRequest();
+    // Open the request, passing the address (ip) with the uri ex (/users)
+    reqs[uri].open("GET", ip+uri, true);
+    reqs[uri].send();
+    reqs[uri].onreadystatechange = function() {
+        if (reqs[uri].readyState == 4 && reqs[uri].status == 200) {
+            console.log(reqs[uri]);
+            var myArr = JSON.parse(reqs[uri].responseText);
+            myFunction(reqs[uri].responseURL,myArr);
+        }
+    };
+})
+
+
+// Creates a little block with the response data from the api.
+function myFunction(title,arr) {
+    var out = "<h2>"+title+"</h2>";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        // Check that the data has appropriate fields
+        if((arr[i].sensor_id || arr[i].sensorID) && arr[i].value){
+            out += '<a href="">' +
+            (arr[i].sensor_id || arr[i].sensorID) + '</a><br> value: '+arr[i].value+'<br> timestamp: '+arr[i].timestamp+'<br><br>';
+        }else{
+            out+=JSON.stringify(arr[i], null, '\t');
+        }
+    }
+    var contain=document.createElement('div');
+    contain.innerHTML=out;
+    document.body.appendChild(contain);
+}
+
+
+
+// Fancy way to parse queries from the url bar
+//    Like file://.../.../web.html?limit=900
+/* 
+params={};
+location.search.split('&').forEach(function(e){
+    params[e.split('=')[0].replace('?','')]=e.split('=')[1]
+})
+var url = "http://128.2.20.131:50000/values/"+params.sensor_id+'?limit='+params.limit;
+*/
+
+</script>
+
+</body>
+</html>

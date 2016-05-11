@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="Chart.js"></script>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    width: 550px;
+    height: 50px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:100px;
+    width:230px;
+    float:left;
+    padding:5px;
+    font-size: 50px	      
+}
+#section {
+    width:400px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:white;
+    
+   
+    text-align:center;
+   padding:5px;	
+
+   } 	 
+</style>
+</head>
+<body>
+
+<div id="header">
+<h1>Medication</h1>
+</div>
+<div id="nav">
+</div>
+
+
+<div id="nav" width= "50px">
+<select>
+  <option value="7">7 days</option>
+  <option value="14">14 days</option>
+  <option value="21">21 days</option>
+  <option value="28">28 days</option>
+</select>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<div id="nav" width= "50px">
+<input type = "Submit" value = "Confirm">
+</div>
+
+<div id= "footer" style="width:30%" align="center">
+      <div>
+        <canvas id="canvas" height="300" width="400"></canvas>
+      </div>
+    </div>
+
+
+
+ <script>
+  var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+  var barChartData = {
+    labels : ["January","February","March","April","May","June","July"],
+    datasets : [{
+      fillColor : "rgba(151,187,205,0.5)",
+      strokeColor : "rgba(151,187,205,0.8)",
+      highlightFill : "rgba(151,187,205,0.75)",
+      highlightStroke : "rgba(151,187,205,1)",
+      data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+    }]
+  }
+  // window.onload = function(){
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myBar = new Chart(ctx).Bar(barChartData); //, {
+    //   responsive : true
+    // });
+  // }
+
+  </script>
+
+
+</body>
+</html>
+  

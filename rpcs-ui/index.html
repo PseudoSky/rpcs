@@ -1,0 +1,372 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRD'S EYE CARE</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/BEC.png" type="image/gif" sizes="16x16">
+    <script src="Chart.js"></script>
+    <link rel='stylesheet' href='css/fullcalendar/fullcalendar.css' />
+  </head>
+  <body>
+
+<!-- Top bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+      <!--testing responsive-->
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon dark" type="button" data-toggle></button>
+        </span>
+        <img id="bird-img" width="40" height="auto" src="img/BEC.png">
+        <font id="title"><a href="index.html" id="title">BIRD'S EYE CARE</a></font>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-left">
+          <ul class="vertical medium-horizontal menu">
+            <li><a class="top-text" href="my-members.html">My Members</a></li>
+            <li><a class="top-text" href="schedule.html">Schedule</a></li>
+            <li><a class="top-text" href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <div>
+            <font>Hi Sally!</font>
+            <img id="cc-img" src="img/member-pic.png" width="50" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--My Section UPDATES -->
+  <div id="main-page-background" class="row">
+    <div id="main-page" class="small-12 small-centered columns">
+        <p class="section-header">Member Updates: Week of April 25th  </p><hr>
+        <div class="row">
+          <div class="large-6 columns">
+            <div id="member-update-content">
+              <div class="row">
+                <div class="small-3 columns" style="text-align: center;">
+                  <img src="img/woman-1.png" width="100">
+                  <p id="hp-member-name"><a href="ester-rohbark.html" class="hp-member-name-lnk"><b>Ester Rohbark</b></a></p> 
+                </div>
+                <div class="small-9 columns">
+                  <p>Ester needs your attention: Increased fatigue, less exercise, and increasing pain. </p>
+                  <div style="float: right; padding: 10px 0 0 0;">
+                    <a href="ester-rohbark.html" class="hp-button-primary" >See Details</a>
+                    <a href="#" class="hp-button-secondary">Dismiss</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div id="member-update-content">
+              <div class="row">
+                <div class="small-3 columns" style="text-align: center;">
+                  <img src="img/man-1.png" width="100">
+                  <p id="hp-member-name"><a href="#" class="hp-member-name-lnk"><b>Paul Seinfeld</b></a></p>
+                </div>
+                <div class="small-9 columns" >
+                  <p>Paul needs your attention: Increased fatigue, less exercise, and increasing pain. </p>
+                  <div style="float: right; padding: 10px 0 0 0;">
+                    <a href="#" class="hp-button-primary" >See Details</a>
+                    <a href="#" class="hp-button-secondary">Dismiss</a>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--START CALENDAR-->
+        <br/>
+        <p class="section-header">Your Schedule</p><hr>
+        
+        
+        <div style="padding: 0">
+        <!--CONTAINER ROW-->
+          <div class="row small-uncollapse medium-collapse large-uncollapse">
+            <!--Month column-->
+            <div class="large-6 columns">
+              <div id='calendar2'></div>
+              <div><a href="schedule.html">See weekly schedule</a><br/><br/></div>
+            </div>
+            <!--AGENDA SIDE -->
+            <div class="large-6 columns">
+              <div id='calendar'></div>
+            </div>
+          </div>
+          <!--Close row-->
+        </div>
+        <div> <br/></div>
+    </div>
+    <div> <br/></div>
+  </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src='js/fullcalendar/lib/jquery.min.js'></script>
+    <script src='js/fullcalendar/lib/moment.min.js'></script>
+    <script src='js/fullcalendar/fullcalendar.js'></script>
+    <script type='text/javascript' src='js/fullcalendar/gcal.js'></script>
+
+    <script src="js/vendor/jquery.sticky.js"></script>
+ 
+    <script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+    </script>
+
+    
+    <script>
+      $(document).ready(function() {
+
+        // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+            // put your options and callbacks here
+            header: {
+            left: 'title',
+            right: 'prev,next today'
+            }, //end header
+
+            //start actions
+
+            //start views
+            defaultDate: '2016-04-27',
+            titleFormat: 'MMM D' ,
+            defaultView: 'agendaDay',
+            eventLimit: true,
+            height: 'auto' ,
+            //eventColor: '#378006' ,
+
+            //display active business hours
+            businessHours: 'true' ,
+            scrollTime: '09:00' ,
+            minTime:'09:00:00' ,
+            maxTime:'18:00:00' ,
+
+            //Events
+            eventSources: [
+              {
+                events:[
+                  {
+                  title: 'Funding deadline',
+                  start: '2016-04-22',
+                  description:'this works'
+                  },
+                  {
+                  title: 'Meeting',
+                  start: '2016-04-21T10:30:00',
+                  end: '2016-04-21T12:30:00',
+                  description:'this works'
+                  },
+                  {
+                  title: 'CC Meeting',
+                  start: '2016-04-19T09:00:00',
+                  end: '2016-04-19T10:00:00'
+                  },
+                  {
+                  title: 'Call with John',
+                  start: '2016-04-22T11:00:00',
+                  end: '2016-04-22T11:30:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-04T12:00:00',
+                  end: '2016-04-04T12:45:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-08T09:00:00',
+                  end: '2016-04-08T09:45:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-12T11:00:00',
+                  end: '2016-04-12T11:45:00'
+                  },
+                  {
+                  title: 'Board Members Meeting',
+                  start: '2016-04-14T14:00:00',
+                  end: '2016-04-14T14:45:00'
+                  },
+                  {
+                  title: 'Home visit with John Anderson',
+                  start: '2016-04-20T13:30:00',
+                  end: '2016-04-20T15:30:00'
+                  },
+                  {
+                  title: 'Funding deadline',
+                  start: '2016-04-26',
+                  description:'this works'
+                  },
+                  {
+                  title: 'Meeting',
+                  start: '2016-04-29T10:30:00',
+                  end: '2016-04-29T12:30:00',
+                  description:'this works'
+                  },
+                  {
+                  title: 'CC Meeting',
+                  start: '2016-04-27T09:00:00',
+                  end: '2016-04-27T10:00:00'
+                  },
+                  {
+                  title: 'Meeting with John',
+                  start: '2016-04-27T11:00:00',
+                  end: '2016-04-27T11:30:00'
+                  },
+                   {
+                  title: 'Weekly meeting with Sam',
+                  start: '2016-04-27T12:00:00',
+                  end: '2016-04-27T12:45:00'
+                  },
+                  {
+                  title: 'Check-in call with Ester',
+                  url: 'ester-rohbark.html',
+                  start: '2016-04-27T13:30:00',
+                  end: '2016-04-27T14:30:00'
+                  }
+                ]
+              }
+
+            ]//end events
+
+        })//end full calendar
+
+      }); //end document
+    </script>
+
+    <script>
+      $(document).ready(function() {
+
+        // page is now ready, initialize the calendar...
+
+        $('#calendar2').fullCalendar({
+            // put your options and callbacks here
+            header: {
+            left: 'title',
+            right: 'prev,next'
+            }, //end header
+
+            //start actions
+
+            //start views
+            //defaultDate: '2016-04-20',
+            titleFormat: 'MMMM' ,
+            defaultView: 'month',
+            fixedWeekCount:  'false' ,
+            eventLimit: true,
+            //height: 'auto' ,
+            aspectRatio: 1,
+            //eventColor: '#378006' ,
+
+            //display active business hours
+            businessHours: 'true' ,
+            scrollTime: '09:00' ,
+            minTime:'09:00:00' ,
+            maxTime:'18:00:00' ,
+
+            //Events
+            eventSources: [
+              {
+                events:[
+                  {
+                  title: 'Funding deadline',
+                  start: '2016-04-22',
+                  description:'this works'
+                  },
+                  {
+                  title: 'Meeting',
+                  start: '2016-04-21T10:30:00',
+                  end: '2016-04-21T12:30:00',
+                  description:'this works'
+                  },
+                  {
+                  title: 'CC Meeting',
+                  start: '2016-04-19T09:00:00',
+                  end: '2016-04-19T10:00:00'
+                  },
+                  {
+                  title: 'Call with John',
+                  start: '2016-04-22T11:00:00',
+                  end: '2016-04-22T11:30:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-04T12:00:00',
+                  end: '2016-04-04T12:45:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-08T09:00:00',
+                  end: '2016-04-08T09:45:00'
+                  },
+                  {
+                  title: 'Talk with Josh',
+                  start: '2016-04-12T11:00:00',
+                  end: '2016-04-12T11:45:00'
+                  },
+                  {
+                  title: 'Board Members Meeting',
+                  start: '2016-04-14T14:00:00',
+                  end: '2016-04-14T14:45:00'
+                  },
+                  {
+                  title: 'Home visit with John Anderson',
+                  start: '2016-04-20T13:30:00',
+                  end: '2016-04-20T15:30:00'
+                  },
+                  {
+                  title: 'Funding deadline',
+                  start: '2016-04-26',
+                  description:'this works'
+                  },
+                  {
+                  title: 'Meeting',
+                  start: '2016-04-29T10:30:00',
+                  end: '2016-04-29T12:30:00',
+                  description:'this works'
+                  },
+                  {
+                  title: 'CC Meeting',
+                  start: '2016-04-27T09:00:00',
+                  end: '2016-04-27T10:00:00'
+                  },
+                  {
+                  title: 'Meeting with John',
+                  start: '2016-04-27T11:00:00',
+                  end: '2016-04-27T11:30:00'
+                  },
+                   {
+                  title: 'Weekly meeting with Sam',
+                  start: '2016-04-27T12:00:00',
+                  end: '2016-04-27T12:45:00'
+                  },
+                  {
+                  title: 'Check-in call with Ester',
+                  url: 'ester-rohbark.html',
+                  start: '2016-04-27T13:30:00',
+                  end: '2016-04-27T14:30:00'
+                  }
+                ]
+              }
+
+            ]//end events
+
+        })//end full calendar
+
+      }); //end document
+    </script>
+
+
+  </body>
+</html>

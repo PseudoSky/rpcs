@@ -1,0 +1,28 @@
+<html>
+<head>
+<link href="C:/Users/madhuri/Desktop/c3.min.css" rel="stylesheet" type="text/css">
+<script src="C:/Users/madhuri/Desktop/Chart.js"></script>
+<!-- Load d3.js and c3.js -->
+<script src="C:/Users/madhuri/Desktop//d3.min.js" charset="utf-8"></script>
+<script src="C:/Users/madhuri/Desktop/c3.min.js"></script>
+</head>
+
+<body>
+<div id="chart"></div>
+<script>
+
+var chart = c3.generate({
+    data: {
+        columns: [
+            ['data1', 300, 350, 300, 0, 0, 100],
+            ['data2', 130, 100, 140, 200, 150, 50]
+        ],
+        types: {
+            data1: 'step',
+            data2: 'area-step'
+        }
+    }
+});
+</script>
+</body>
+</html>

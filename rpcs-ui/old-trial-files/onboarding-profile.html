@@ -1,0 +1,288 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRD'S EYE CARE</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/BEC.png" type="image/gif" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jsapi.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
+        <script type="text/javascript">
+        var weightValues = [];
+        </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  
+  <script>
+  function postValues()
+    { var first_name =  document.getElementById("first-name").value ;
+      //alert(document.getElementById("first-name").value+" "+first_name );
+
+
+
+      var last_name = document.getElementById("last-name").value ;
+      //alert(document.getElementById("last-name").value+"  "+last_name);
+      var gender = document.getElementById("gender").value;
+      //alert(gender);
+      var dob = document.getElementById("dob").value;
+      //alert(dob);
+      var phone = document.getElementById("phone").value;
+      //alert(phone);
+      var mobile = document.getElementById("mobile").value;
+      //console.log(mobile);
+      var email = document.getElementById("email").value;
+      //alert(email);
+      var address1 = document.getElementById("address1").value;
+       //alert(address1);
+      var address2 = document.getElementById("address2").value;
+      //alert(address2);
+      var city = document.getElementById("city").value;
+      //alert(city);
+      var state = document.getElementById("state").value;
+      //alert(state);
+      var zipcode = document.getElementById("zip-code").value;
+      //alert(zipcode);
+      // alert("here");
+
+      
+        
+        $.post('http://128.2.20.131:50000/users',
+        {
+            first: first_name ,
+            last: last_name ,
+            gender: gender,
+            dob: dob ,
+            mobile: phone ,
+            email: email,
+            address1: address1 ,
+            address2: address2,
+            city: city,
+            state: state,
+            zipcode: zipcode
+            
+            
+        },
+        function(data,status){
+            //alert("here");
+            alert("Patient Profile created");
+        });
+    
+
+
+     //funtion2();
+     //alert("calling function2");
+    
+
+
+
+
+     //funtion2();
+     alert("calling function2");
+
+
+   } 
+
+  function funtion2()
+{
+  $.post('http://128.2.20.131:50000/users',
+        {
+            first: "first_name2" ,
+            last: "last_name2" 
+            
+        },
+        function(data,status){
+            //alert("here");
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    
+
+
+
+
+}
+
+
+
+
+
+ </script>
+</head>
+ <body>
+
+<!-- Top bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <!--Hamburger menu -->
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium" >
+          <button class="menu-icon dark" type="button" data-toggle ></button>
+        </span>
+        
+        <img id="bird-img" width="40" height="auto" src="img/BEC.png">
+        <font id="title"><a href="index.html" id="title">BIRD'S EYE CARE</a></font>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-left">
+          <ul class="vertical medium-horizontal menu">
+            <li><a class="top-text" href="my-members.html">My Members</a></li>
+            <li><a class="top-text" href="schedule.html">Schedule</a></li>
+            <li><a class="top-text" href="#">Settings</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <div>
+            <font>Hi Sally!</font>
+            <img id="cc-img" src="img/member-pic.png" width="50" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Main page -->
+    <div id="main-page-background" class="row">
+      <div id="main-page" class="small-12 small-centered columns">
+        <p class="section-header">My Member</p><hr>
+        <div id="member-info-row" class="row">
+          <div class="small-2 columns">
+            <img id="member-img" src="img/woman-1.png">
+            <p id="member-name"><b>Ester Rohbark</b></p>
+            <div style="text-align: center;"><a href="onboarding.html" style="color:#9c9c9c; text-align: center; font-size: 9pt;">Edit Profile</a></div>
+          </div>
+          <div class="small-10 columns">
+            <div id="tabs-position">
+              <ul class="tabs" data-tabs id="member-tabs">
+                <li class="tabs-title is-active"><a class="member-info-tabs" href="#demographics" aria-selected="true">Demographics</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#measurments">Measurements</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#medical-history">Medical History</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#insurance">Insurance</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#family-caregivers">Family Caregivers</a></li>
+              </ul>
+
+              <div class="tabs-content" data-tabs-content="member-tabs">
+                <div class="tabs-panel is-active" id="demographics">first
+                  <div class="row">
+                    <div class="small-6 columns">
+                      <form>
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">First name:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="first-name" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Last name:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="last-name" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Gender:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="gender" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">DOB:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="dob" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Phone:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="phone" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Mobile:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="mobile" value="">
+                          </div>
+                        </div>
+                      
+                    </div>
+
+                    <div class="small-6 columns">
+                        
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Email:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="email" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Address 1:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="address1" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Address 2:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="address2" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">City:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="city" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">State:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="state" value="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Zip code:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="zip-code" value="">
+                          </div>
+                        </div>
+ <input type= "submit" onClick= "postValues()" value="Submit Profile"></input>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+</body>
+</html>
+                

@@ -1,0 +1,1579 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRD'S EYE CARE</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/BEC.png" type="image/gif" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jsapi.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
+        <script type="text/javascript">
+        var weightValues = [];
+        </script>
+   <script>
+   function function2()
+  {  //alert("funciton2");
+    //alert("function2+ "+friendsArr[0]);
+    //alert("function2+ "+familyArr[0]);
+    //alert("function2+ "+left_houseArr[0]);
+    //alert("function2+ "+         unplanned_interactionsArr[0]);
+    
+    var data = {
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [
+                {
+            label: "Social Activity Visiting Friends",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [friendsArr[0], friendsArr[1], friendsArr[2], friendsArr[3],friendsArr[4],friendsArr[5],friendsArr[6]]
+        
+},
+
+
+        {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [65,65,65,65,65,65,65]
+        }
+     
+      
+
+
+
+     ]
+};
+    
+
+var data1 = {
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11", "12","13","14"],
+    datasets: [
+                {
+            label: "Social Activity Visiting Friends",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [friendsArr[0], friendsArr[1], friendsArr[2], friendsArr[3],friendsArr[4],friendsArr[5],friendsArr[6],friendsArr[7], friendsArr[8], friendsArr[9], friendsArr[10],friendsArr[11],friendsArr[12],friendsArr[13]]
+
+
+
+
+        },
+
+
+        {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [65,65,65,65,65,65,65,65,65,65,65,65,65,65
+
+]
+        }
+
+     
+      
+       
+
+
+        
+
+    ]
+};
+
+var data2 = {
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11", "12","13","14","15","16","17","18","19","20","21","22","23","24","25","27","28","29","30"],
+    datasets: [
+                {
+            label: "Social Activity Visiting Friends",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [friendsArr[0], friendsArr[1], friendsArr[2], friendsArr[3],friendsArr[4],friendsArr[5],friendsArr[6],friendsArr[7], friendsArr[8], friendsArr[9], friendsArr[10],friendsArr[11],friendsArr[12],friendsArr[13],
+friendsArr[14], friendsArr[15], friendsArr[16],friendsArr[17],friendsArr[18],friendsArr[19]]
+
+
+
+
+
+
+
+
+        },
+
+{
+            label: "Social Activity Visiting Friends",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65]
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+        
+
+    ]
+};
+
+
+
+
+ 
+  
+if(flag==1 && friendsArr.length !=0)
+{ //alert("ctx");  
+var ctx = document.getElementById("heartrate-canvas").getContext("2d");
+   var myBarChart = new Chart(ctx).Line(data);
+
+   
+}
+
+if(flag==2 && friendsArr.length !=0)
+
+{ //alert("ctx");  
+var ctx = document.getElementById("heartrate-canvas").getContext("2d");
+   var myBarChart = new Chart(ctx).Line(data1);
+}
+
+if(flag==3 && friendsArr.length !=0)
+{ //alert("ctx");  
+var ctx = document.getElementById("heartrate-canvas").getContext("2d");
+   var myBarChart = new Chart(ctx).Line(data2);
+}
+
+
+
+  
+    }  // end of function2 
+  
+  
+  
+
+  
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+  </head>
+  <body onload=""
+    onresize="getHeartRate(); weightAnim(); medicationAnim(); physicalAnim(); socialAnim(); moodAnim(); painAnim(); bathroomAnim(); nutritionAnim(); sleepAnim();">
+
+<script>
+   var friendsArr = [];
+   var familyArr = [];
+   var left_houseArr = [];
+   var unplanned_interactionsArr = [];
+   var id2 ; var strUser; 
+  
+  var flag=0;
+   
+    
+  function getHeartRate()
+{  
+   //alert("hello");
+    id2 = document.getElementById("id1"); 
+    strUser = id2.options[id2.selectedIndex].value;
+    //alert(strUser);
+      
+  
+  
+       //lert("undeifned");
+   
+    
+
+ if(strUser == "1")
+ { //alert("week");
+  //alert("here");
+  $.ajax({ 
+    type: 'GET', 
+    url: 'http://128.2.20.131:50000/values/resting-heart-rate', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+     //alert("success");  
+     
+     $.each(data, function(index, element) {
+          if(index<7);
+          friendsArr.push(element.value);
+       
+       
+        });
+       
+      // alert("friendsArr length= " +friendsArr.length+"  "+friendsArr[0]);
+       flag=1;
+       
+    }
+
+});
+  
+  
+  
+  
+
+  // function2();
+ }
+
+else if(strUser == "7")
+ {
+ 
+   friendsArr = [];
+   familyArr = [];
+   left_houseArr = [];
+   unplanned_interactionsArr = [];
+
+
+  //alert(" 2 weeks");
+  //alert("here");
+  $.ajax({ 
+    type: 'GET', 
+    url: 'http://128.2.20.131:50000/values/resting-heart-rate', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+     //alert("success");  
+     
+     $.each(data, function(index, element) {
+          // alert(element.value);
+          if(index<13)
+          friendsArr.push(element.value);
+       
+       
+        });
+       
+     //  alert("friendsArr length= " +friendsArr.length+"  "+friendsArr[0]);
+       flag=2;
+       
+    }
+
+});
+  
+  
+
+  //function2();
+ }
+
+
+else if(strUser == "28")
+ {
+   friendsArr = [];
+   familyArr = [];
+   left_houseArr = [];
+   unplanned_interactionsArr = [];
+
+  //("Month");
+  //alert("here");
+  $.ajax({ 
+    type: 'GET', 
+    url: 'http://128.2.20.131:50000/values/resting-heart-rate', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+     //alert("success");  
+     
+     $.each(data, function(index, element) {
+          // alert(element.value);
+           if(index<20)
+          friendsArr.push(element.value);
+       
+       
+        });
+       
+      // alert("friendsArr length= " +friendsArr.length+"  "+friendsArr[0]);
+       flag=3;
+       
+    }
+
+}); // end of AJAX
+  
+  
+       
+      // alert("unplanned_interactionsArr = " +unplanned_interactionsArr.length );
+    
+         flag=3;
+} // end of if
+
+
+ 
+  //function2();
+
+
+} // end of function
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+   
+
+
+
+     
+  
+  
+ 
+  </script>
+
+
+
+<!-- Top bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <!--Hamburger menu -->
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium" >
+          <button class="menu-icon dark" type="button" data-toggle ></button>
+        </span>
+        
+        <img id="bird-img" width="40" height="auto" src="img/BEC.png">
+        <font id="title"><a href="index.html" id="title">BIRD'S EYE CARE</a></font>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-left">
+          <ul class="vertical medium-horizontal menu">
+            <li><a class="top-text" href="my-members.html">My Members</a></li>
+            <li><a class="top-text" href="schedule.html">Schedule</a></li>
+            <li><a class="top-text" href="#">Settings</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <div>
+            <font>Hi Sally!</font>
+            <img id="cc-img" src="img/member-pic.png" width="50" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Main page -->
+    <div id="main-page-background" class="row">
+      <div id="main-page" class="small-12 small-centered columns">
+        <p class="section-header">My Member</p><hr>
+        <div id="member-info-row" class="row">
+          <div class="small-2 columns">
+            <img id="member-img" src="img/woman-1.png">
+            <p id="member-name"><b>Ester Rohbark</b></p>
+            <div style="text-align: center;"><a href="onboarding.html" style="color:#9c9c9c; text-align: center; font-size: 9pt;">Edit Profile</a></div>
+          </div>
+          <div class="small-10 columns">
+            <div id="tabs-position">
+              <ul class="tabs" data-tabs id="member-tabs">
+                <li class="tabs-title is-active"><a class="member-info-tabs" href="#demographics" aria-selected="true">Demographics</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#measurments">Measurements</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#medical-history">Medical History</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#insurance">Insurance</a></li>
+                <li class="tabs-title"><a class="member-info-tabs" href="#family-caregivers">Family Caregivers</a></li>
+              </ul>
+
+              <div class="tabs-content" data-tabs-content="member-tabs">
+                <div class="tabs-panel is-active" id="demographics">
+                  <div class="row">
+                    <div class="small-6 columns">
+                      <form>
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">First name:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="Ester">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Last name:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="Rohbark">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Gender:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="Female">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">DOB:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="September">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Phone:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="412-254-2048">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Mobile:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="412-344-7032">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="small-6 columns">
+                        <form>
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Email:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="estheroh@gmail.com">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Address 1:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="6133 Alder St.">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Address 2:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="#101">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">City:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="Pittsburgh">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">State:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="Pennsylvania">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="small-3 columns">
+                            <label for="middle-label" class="text-right middle">Zip code:</label>
+                          </div>
+                          <div class="small-9 columns">
+                            <input type="text" id="middle-label" placeholder="42104">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs-panel" id="measurments">
+                  <p>Measurment info</p>
+                </div>
+                <div class="tabs-panel" id="medical-history">
+                  <p>Medical history info</p>
+                </div>
+                <div class="tabs-panel" id="insurance">
+                  <p>Insurance info</p>
+                </div>
+                <div class="tabs-panel" id="family-caregivers">
+                  <p>Family caregivers info</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-header">Alerts</p><hr>
+        <div class="row" id="alert-row">
+          <div class="small-11 small-centered columns">Alerts go here</div>
+        </div>
+        <p class="section-header">Dashboard</p><hr>
+        <div class="row" id="dashboard-row">
+          <div id="dashboard-background" class="small-11 small-centered columns">
+
+            <!-- ENTER WIDGETS INSIDE THIS DIV -->
+            <div class="row"><br></div>
+
+            <div class="row">
+              <div class="large-6 medium-6 small-6 columns"> <!--Heart Rate-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Heart Rate</h6>
+                  <select id="id1" onchange="getHeartRate()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+<!--                   <div class= "footer" style="width:100%" align="center"> -->
+                    <canvas id="heartrate-canvas" height="300" width="400"></canvas>
+    <button onClick = "function2()">Generate Chart</button>
+
+
+<!--                   </div> -->
+                  
+                  
+                    
+                </div>
+              </div>
+              <div class="large-6 medium-6 small-6 columns"> <!--Weight-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Weight</h6>
+                  <select id="weightAxis" onchange="weightAnim(); getWeightData()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class="footer" style="width:100%" align="center">
+                    <div id="weight-canvas" height="300" width="400"></div>
+                  </div>
+              
+                  <script type="text/javascript">
+                  // Load the Visualization API and the piechart package.
+
+
+                  function getWeightData (timeValue, handleResponse) {
+
+                      $.ajax({
+                        type: 'GET',
+                        url: 'http://128.2.20.131:50000/values/weight',
+                        aysnc: false,
+                        data: {get_param: 'value'},
+                        dataType: 'json',
+                        success: handleResponse
+                      });
+                   }
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawWeight() {
+                      // alert ("called draw weight");
+                      var s = document.getElementById ('weightAxis');
+                      var weightAxis = s.options [s.selectedIndex].value;
+                    // Create the data table.              
+
+                      var weightValues = [];
+                      getWeightData(weightAxis, function (data) {
+
+                        weightValues = _.map(data,'value');
+                        weightTsArr =        _.map(data,'timestamp');
+                        console.log(tsArr);
+                        determineWeightDims(weightAxis, weightValues, weightTsArr);
+                      }); 
+                      // if (weightAxis == 1) {
+              
+
+                      // }
+                      // else if (weightAxis == 7) {
+                      //   getWeightData(7, function (data) {
+                      //     weightValues=_.map(data,'value');
+                      //     // for (var key in data) {
+                      //     // weightValues.push(data[key]);
+                      //     // console.log(key);
+                      //     // }
+                      //     determineDims(7, weightValues);
+                      //     // alert (weightValues.length);
+                      //   }); 
+                      // }
+                      // else if (weightAxis == 28) {
+                      //   getWeightData(28, function (data) {
+                      //     // for (var key in data) {
+                      //     //  weightValues.push(data[key]);
+                      //     // }
+                      //     weightValues=_.map(data,'value');
+                      //     determineDims(28, weightValues);
+                      //     // alert (weightValues.length);
+                      //   }); 
+                      // }
+                  }
+
+                    function determineWeightDims (timeValue, weightArr, weightTsArr) {
+                      // alert ("called determine dimensions");
+
+                      var chartData = new google.visualization.DataTable();
+                      chartData.addColumn('string', 'Time');
+                      chartData.addColumn('number', 'Weight');
+                      chartData.addColumn ('number', 'Baseline');
+
+                      var times = [];
+                      var values = [];
+                      var baseline = [];
+                      
+
+                      if (timeValue == 1) {
+                        times = ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM",
+                               "4PM", "5PM", "6PM", "7PM", "8PM"];
+
+                          values = Array(13).fill(0);
+                          weightTsArr.forEach (function (entry) {
+                          var temp = new Date((entry || "").replace(/-/g,"/").replace(/[TZ]/g," "));
+                          if (values[temp.getHours() - 8] == 0)
+                            values[temp.getHours() - 8] = weightArr[weightTsArr.indexOf(entry)];
+
+                        })
+                          baseline = Array(13).fill(72);
+                      }
+
+                      else if (timeValue == 7) {
+                        times = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+                        values = Array(7).fill(0);
+                        weightTsArr.forEach (function (entry) {
+                          var temp = new Date((entry || "").replace(/-/g,"/").replace(/[TZ]/g," "));
+                          console.log (weightArr[weightTsArr.indexOf(entry)]);
+                          if (values[temp.getDay()] < weightArr[weightTsArr.indexOf(entry)]) 
+                            values[temp.getDay()] = weightArr[weightTsArr.indexOf(entry)];
+
+                        })
+                        console.log(values);
+                        baseline = Array(7).fill(72);
+                       
+                      }
+                      else if (timeValue == 28) {
+                        times = ["1", "2", "3", "4", "5", "6", "7",
+                               "8", "9", "10", "11", "12", "13", "14",
+                               "15", "16", "17", "18", "19", "20", "21",
+                               "22", "23", "24", "25", "26", "27", "28"
+                               ];
+                        values = weightArr.slice(0,28);
+                        baseline = Array(28).fill(72);
+                      }
+
+                      var rows = [];
+
+                      for (i = 0; i < times.length; i++) {
+                        rows.push([times[i], values[i], baseline[i]]);
+                      }
+
+                      chartData.addRows(rows);
+
+                      // Set chart options
+                      var options = { legend: {'position':'top', 'alignment':'center'},
+                                    hAxis: {
+                                      title: 'Time',
+                                    },
+                                    vAxis: {
+                                      title: 'lbs'
+                                    }
+                                  };
+
+
+                    // Instantiate and draw our chart, passing in some options.
+                      var chart = new google.visualization.LineChart(document.getElementById('weight-canvas'));
+                      chart.draw(chartData, options);
+
+                    }
+                    function weightAnim() {
+                      drawWeight();
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 medium-6 columns"> <!--Nutrition-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Nutrition</h6>
+                  <select id="nutritionAxis" onchange="nutritionAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div align="center">
+                    <table>
+                      <tr>
+                        <td align="center">
+                          <h4>
+                          <img id="nutrition-img" src="img/liquid.png" width="50" height="auto"></h4>
+                        </td>
+                        <td align="center">
+                          <h4>
+                          <img id="nutrition-img" src="img/snack.png" width="50" height="auto"></h4>
+                        </td>
+                        <td align="center">
+                          <h4>
+                          <img id="nutrition-img" src="img/food.png" width="50" height="auto"></h4>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center"><span id="liquid"></span> average</td>
+                        <td align="center"><span id="snack"></span> average</td>
+                        <td align="center"><span id="food"></span> average</td>
+                      </tr>
+                      <tr>
+                        <td align="center">liquids per day</td>
+                        <td align="center">snacks per day</td>
+                        <td align="center">meals per day</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <script>
+                    var food = function (nutritionAxis) {
+                      if (nutritionAxis == 1) {
+                        return 5;
+                      }
+                      else if (nutritionAxis == 7) {
+                        return 3.1;
+                      }
+                      else if (nutritionAxis == 28) {
+                        return 4;
+                      }
+                    }
+                    var liquid = function(nutritionAxis) {
+                      if (nutritionAxis == 1) {
+                        return 8;
+                      }
+                      else if (nutritionAxis == 7) {
+                        return 6;
+                      }
+                      else if (nutritionAxis == 28) {
+                        return 7;
+                      }
+                    }
+                    var snacks = function (nutritionAxis) {
+                      if (nutritionAxis == 1) {
+                        return 1;
+                      }
+                      else if (nutritionAxis == 7) {
+                        return 3;
+                      }
+                      else if (nutritionAxis == 28) {
+                        return 2;
+                      }
+                    }
+
+                    function nutritionAnim () {
+                      var s = document.getElementById ('nutritionAxis');
+                      var nutritionAxis = s.options [s.selectedIndex].value;
+
+                      var foodAvg = food (nutritionAxis);
+                      var liquidsAverage = liquid(nutritionAxis);
+                      var snacksAverage = snacks(nutritionAxis);
+
+                      document.getElementById('liquid').innerHTML = liquidsAverage;
+                      document.getElementById('snack').innerHTML = snacksAverage;
+                      document.getElementById('food').innerHTML = foodAvg;
+
+                    }
+                  </script>
+                </div>
+              </div>
+              <div class="large-6 medium-6 columns"> <!--Mood-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Mood</h6>
+                  <select id="moodAxis" onchange="moodAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class="footer" style="width:100%" align="left">
+                    <div>
+                      <p>
+                        Top 5 frequent moods for <span = id="time_placeholder"></span>
+                        <ol>
+                          <li><span id="mood_1"></span></li>
+                          <li><span id="mood_2"></span></li>
+                          <li><span id="mood_3"></span></li>
+                          <li><span id="mood_4"></span></li>
+                          <li><span id="mood_5"></span></li>
+                        </ol>
+                      </p>
+                    </div>
+                  </div>
+                  <script>
+                    function getMoodData (timeValue, handleResponse) {
+                      $.ajax({
+                        type: 'GET',
+                        url: 'http://128.2.20.131:50000/values/moods',
+                        aysnc: false,
+                        data: {get_param: 'value'},
+                        dataType: 'json',
+                        success: handleResponse
+                      });
+                    }
+
+                    var randoingFactor = function(){ return Math.round(Math.random()*100)};
+                    var writeMood = function () {
+                      var s = document.getElementById ('moodAxis');
+                      var moodAxis = s.options [s.selectedIndex].value;
+
+                      var tempArr = new Array(16);
+                      var binaryArr = [];
+                      var binaryStr = "";
+                      var top5 = new Array(5);
+                      var moodResponses;
+
+                      var moodList = ["Tired", "Energetic", "Happy", "Miserable",
+                        "Sad", "Content", "Tense", "Frustrated",
+                        "Angry", "Annoyed", "Bored", "Lonely",
+                        "Confused", "Hopeless", "Anxious", "Helpless"
+                      ];
+
+                      getMoodData(moodAxis, function (data) {
+                        tempArr = _.map(data, 'value');
+                        /* Create binary string from int data value */
+                        binaryStr = (tempArr[0] >>> 0).toString(2);
+                        var len = binaryStr.length;
+                        var offset = 16 - len;
+
+                        /* Create array from binary value string */
+                        var counter = 0;
+                        for (counter; counter < len; counter++) {
+                          binaryArr.push(binaryStr[counter]);
+                        }
+                        tempArr = [];
+                        for (counter = 0; counter < offset; counter++) {
+                          tempArr.push(0);
+                        }
+
+                        /* Create array for all 16 mood values */
+                        binaryArr = _.concat(tempArr, binaryArr);
+                        console.log(binaryArr);
+                        determineTop5(binaryArr, moodList);
+                      });
+
+                      // if (moodAxis == 1) {
+                      //     top5 = ["Happy", "Sad", "Miserable", "Lonely", "Angry"];
+                      // }
+                      // else if (moodAxis == 7) {
+                      //     temp = ["Sad", "Frustrated", "Happy", "Energetic", "Tired"];
+                      // }
+                      // else if (moodAxis == 28) {
+                      //     temp = ["Happy", "Frustrated", "Sad", "Energetic", "Lonely"]
+                      // }
+                    }
+
+                    var top5 = [];
+                    function determineTop5(binaryArr, moodList) {
+                      for (counter=0; counter<16; counter++) {
+                        if (binaryArr[counter] == 1) {
+                          top5.push(moodList[counter]);
+                        }
+                      }
+                      console.log(top5);
+
+                      var timeValue;
+                      var s = document.getElementById ('moodAxis');
+                      var moodAxis = s.options [s.selectedIndex].value;
+                      if (moodAxis == 1) {
+                        timeValue = "today";
+                      }
+                      else if (moodAxis == 7) {
+                        timeValue = "the week";
+                      }
+                      else if (moodAxis == 28) {
+                        timeValue = "28 days";
+                      }
+
+                      document.getElementById('time_placeholder').innerHTML = timeValue;
+                      document.getElementById('mood_1').innerHTML = top5[0];
+                      document.getElementById('mood_2').innerHTML = top5[1];
+                      document.getElementById('mood_3').innerHTML = top5[2];
+                      document.getElementById('mood_4').innerHTML = top5[3];
+                      document.getElementById('mood_5').innerHTML = top5[4];
+                    }
+
+                    function moodAnim() {
+                      writeMood();
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-8 medium-8 small-8 columns"> <!--Sleep-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Sleep</h6>
+                  <select id="sleepAxis" onchange="sleepAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="center">
+                    <div id="timeline" height="200" width="500"></div>
+                    <script type="text/javascript">
+                      //google.charts.load('current', {'packages':['timeline']});
+                      //google.charts.setOnLoadCallback(drawChart);
+                      var timeVal = function () {
+                        var timeValue;
+                        var s = document.getElementById ('sleepAxis');
+                        var sleepAxis = s.options [s.selectedIndex].value;
+
+                        if (sleepAxis == 1) {
+                          timeValue = "today";
+                        }
+                        else if (sleepAxis == 7) {
+                          timeValue = "the week";
+                        }
+                        else if (sleepAxis == 28) {
+                          timeValue = "28 days";
+                        }
+                        return timeValue;
+                      }
+
+                      var generateLevels = function () {
+                        var levelValues = new Array(5);
+                        var levelArray = new Array(1);
+                        levelArray[0] = levelValues;
+                        var s = document.getElementById ('sleepAxis');
+                        var sleepAxis = s.options [s.selectedIndex].value;
+                        var timeValue = timeVal();
+
+                        if (sleepAxis == 1) {
+                          levelArray = [
+                            [ timeValue, 'Asleep', new Date(0,0,0,23,0,0), new Date(0,0,0,23,45,0) ],
+                            [ timeValue, 'Awake', new Date(0,0,0,23,45,0), new Date(0,0,1,1,0,0) ],
+                            [ timeValue, 'Restless', new Date(0,0,1,1,0,0), new Date(0,0,1,6,0,0) ],
+                            [ timeValue, 'Asleep', new Date(0,0,1,6,0,0), new Date(0,0,1,9,30,0) ],
+                            [ timeValue, 'Awake', new Date(0,0,1,9,30,0), new Date(0,0,1,10,0,0) ]
+                          ]
+                        }
+                        else if (sleepAxis == 7) {
+                          levelArray = [
+                            [ 'Monday', 'Restless', new Date(0,0,1,0,0,0), new Date(0,0,1,3,45,0) ],
+                            [ 'Monday', 'Awake', new Date(0,0,1,3,45,0), new Date(0,0,1,4,0,0) ],
+                            [ 'Monday', 'Restless', new Date(0,0,1,4,0,0), new Date(0,0,1,6,0,0) ],
+                            [ 'Monday', 'Asleep', new Date(0,0,1,6,0,0), new Date(0,0,1,8,30,0) ],
+                            [ 'Monday', 'Awake', new Date(0,0,1,8,30,0), new Date(0,0,1,9,0,0) ],
+                            [ 'Tuesday', 'Awake', new Date(0,0,0,22,0,0), new Date(0,0,0,23,45,0) ],
+                            [ 'Tuesday', 'Asleep', new Date(0,0,0,23,45,0), new Date(0,0,1,3,0,0) ],
+                            [ 'Tuesday', 'Restless', new Date(0,0,1,3,0,0), new Date(0,0,1,7,0,0) ],
+                            [ 'Tuesday', 'Awake', new Date(0,0,1,7,0,0), new Date(0,0,1,9,30,0) ],
+                            [ 'Tuesday', 'Restless', new Date(0,0,1,9,30,0), new Date(0,0,1,9,45,0) ],
+                            [ 'Wednesday', 'Restless', new Date(0,0,1,0,0,0), new Date(0,0,1,3,45,0) ],
+                            [ 'Wednesday', 'Awake', new Date(0,0,1,3,45,0), new Date(0,0,1,4,0,0) ],
+                            [ 'Wednesday', 'Restless', new Date(0,0,1,4,0,0), new Date(0,0,1,6,0,0) ],
+                            [ 'Wednesday', 'Asleep', new Date(0,0,1,6,0,0), new Date(0,0,1,8,30,0) ],
+                            [ 'Wednesday', 'Awake', new Date(0,0,1,8,30,0), new Date(0,0,1,9,0,0) ],
+                            [ 'Thursday', 'Awake', new Date(0,0,0,22,0,0), new Date(0,0,0,23,45,0) ],
+                            [ 'Thursday', 'Asleep', new Date(0,0,0,23,45,0), new Date(0,0,1,3,0,0) ],
+                            [ 'Thursday', 'Restless', new Date(0,0,1,3,0,0), new Date(0,0,1,7,0,0) ],
+                            [ 'Thursday', 'Awake', new Date(0,0,1,7,0,0), new Date(0,0,1,9,30,0) ],
+                            [ 'Thursday', 'Restless', new Date(0,0,1,9,30,0), new Date(0,0,1,9,45,0) ],
+                            [ 'Friday', 'Restless', new Date(0,0,1,0,0,0), new Date(0,0,1,3,45,0) ],
+                            [ 'Friday', 'Awake', new Date(0,0,1,3,45,0), new Date(0,0,1,4,0,0) ],
+                            [ 'Friday', 'Restless', new Date(0,0,1,4,0,0), new Date(0,0,1,6,0,0) ],
+                            [ 'Friday', 'Asleep', new Date(0,0,1,6,0,0), new Date(0,0,1,8,30,0) ],
+                            [ 'Friday', 'Awake', new Date(0,0,1,8,30,0), new Date(0,0,1,9,0,0) ]
+                          ]
+                        }
+                        else if (sleepAxis == 28) {
+                          levelArray = [
+                            [ timeValue, 'Awake', new Date(0,0,0,22,0,0), new Date(0,0,0,23,45,0) ],
+                            [ timeValue, 'Asleep', new Date(0,0,0,23,45,0), new Date(0,0,1,3,0,0) ],
+                            [ timeValue, 'Restless', new Date(0,0,1,3,0,0), new Date(0,0,1,7,0,0) ],
+                            [ timeValue, 'Awake', new Date(0,0,1,7,0,0), new Date(0,0,1,9,30,0) ],
+                            [ timeValue, 'Restless', new Date(0,0,1,9,30,0), new Date(0,0,1,9,45,0) ]
+                          ]
+                        }
+                        return levelArray;
+                      }
+
+                      function drawChart() {
+                        var container = document.getElementById('timeline');
+                        var chart = new google.visualization.Timeline(container);
+                        var dataTable = new google.visualization.DataTable();
+                        var levelArray = generateLevels();
+
+                        dataTable.addColumn({ type: 'string', id: 'Day' });
+                        dataTable.addColumn({ type: 'string', id: 'Level' });
+                        dataTable.addColumn({ type: 'date', id: 'Start' });
+                        dataTable.addColumn({ type: 'date', id: 'End' });
+                        dataTable.addRows(levelArray);
+
+                        var options = {
+                          timeline: { showRowLabels: false },
+                          avoidOverlappingGridLines: false
+                        };
+
+                        chart.draw(dataTable);
+                      }
+
+                      function sleepAnim() {
+                        drawChart();
+                      }
+                    </script>
+                  </div>
+                </div>
+              </div>
+              <div class="large-4 medium-4 small-4 columns"> <!--Bathroom Habits-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Bathroom Habits</h6>
+                  <select id="bathroomAxis" onchange="bathroomAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="center">
+                    <div>
+                      <h1><span = id="bathroomFreq"></span></h1>
+                      <p>times <span = id="bathroomTime"></span></p>
+                    </div>
+                  </div>
+                  <script>
+                    var bathFreq = function () {
+                      var freq;
+                      var s = document.getElementById ('bathroomAxis');
+                      var bAxis = s.options [s.selectedIndex].value;
+
+                      if (bAxis == 1) {
+                        freq = 6;
+                      }
+                      else if (bAxis == 7) {
+                        freq = 7;
+                      }
+                      else if (bAxis == 28) {
+                        freq = 5;
+                      }
+                      return freq;
+                    }
+                    var bTime = function () {
+                      var timeValue;
+                      var s = document.getElementById ('bathroomAxis');
+                      var bAxis = s.options [s.selectedIndex].value;
+
+                      if (bAxis == 1) {
+                        timeValue = " today";
+                      }
+                      else if (bAxis == 7) {
+                        timeValue = " on average this week";
+                      }
+                      else if (bAxis == 28) {
+                        timeValue = " on average over 28 days";
+                      }
+                      return timeValue;
+                    }
+
+                    function bathroomAnim() {
+                      var frequency = bathFreq();
+                      var bathTime = bTime();
+                      document.getElementById('bathroomFreq').innerHTML = frequency;
+                      document.getElementById('bathroomTime').innerHTML = bathTime;
+
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 medium-6 columns"> <!--Phys Activity-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Physical Activity</h6>
+                  <select id="paAxis" onchange="physicalAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="center">
+                    <div id="physical-canvas" height="300" width="400"></div>
+                  </div>
+                  
+                  <script type="text/javascript">
+                  // Load the Visualization API and the piechart package.
+                    //google.load('visualization', '1.0', {'packages':['corechart']});
+                    //google.setOnLoadCallback(drawPhysicalActivity);
+
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawPhysicalActivity() {
+
+                    // Create the data table.
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Time');
+                    data.addColumn('number', 'Steps');
+                    data.addColumn ('number', 'Baseline');
+                    var s = document.getElementById ('paAxis');
+                    var paAxis = s.options [s.selectedIndex].value;
+
+                    if (paAxis == 1) {
+                      times = ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM",
+                               "4PM", "5PM", "6PM", "7PM", "8PM"];
+                      values = [71, 72, 73, 71, 72, 73, 71, 72, 73, 71, 72, 73, 71];
+                      baseline = Array(13).fill(72);
+                    }
+                    else if (paAxis == 7) {
+                      times = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+                      values = [71, 72, 73, 74, 75, 76, 77];
+                      baseline = Array(7).fill(72);
+
+                    }
+                    else if (paAxis == 28) {
+                      times = ["1", "2", "3", "4", "5", "6", "7",
+                               "8", "9", "10", "11", "12", "13", "14",
+                               "15", "16", "17", "18", "19", "20", "21",
+                               "22", "23", "24", "25", "26", "27", "28"
+                               ];
+                      values = [71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77
+                                ];
+                      }
+                      baseline = Array(28).fill(72);
+
+
+                      var rows = [];
+
+                      for (i = 0; i < times.length; i++) {
+                        rows.push([times[i], values[i], baseline[i]]);
+                      }
+
+                      data.addRows(rows);
+                    // Set chart options
+                    var options = { legend: {'position':'top', 'alignment':'center'},
+                                    hAxis: {
+                                      title: 'Time',
+                                    },
+                                    vAxis: {
+                                      title: 'Steps'
+                                    },
+                                  };
+
+
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.LineChart(document.getElementById('physical-canvas'));
+                    chart.draw(data, options);
+                  }
+                    function physicalAnim() {
+                      drawPhysicalActivity();
+                    }
+                    </script>
+                </div>
+              </div>
+              <div class="large-6 medium-6 columns"> <!--Social Activity-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Social Activity</h6>
+                  <select id="saAxis" onchange="socialAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="center">
+                    <div id="social-canvas" height="300" width="400"></div>
+                  </div>
+                 
+                  <script type="text/javascript">
+                  // Load the Visualization API and the piechart package.
+                    //google.load('visualization', '1.0', {'packages':['corechart']});
+                    //google.setOnLoadCallback(drawSocialActivity);
+
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawSocialActivity() {
+
+                    // Create the data table.
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Time');
+                    data.addColumn('number', 'Social Score');
+                    data.addColumn ('number', 'Baseline');
+                    var s = document.getElementById ('saAxis');
+                    var saAxis = s.options [s.selectedIndex].value;
+
+                    if (saAxis == 1) {
+                      times = ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM",
+                               "4PM", "5PM", "6PM", "7PM", "8PM"];
+                      values = [71, 72, 73, 71, 72, 73, 71, 72, 73, 71, 72, 73, 71];
+                      baseline = Array(13).fill(72);
+                    }
+                    else if (saAxis == 7) {
+                      times = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+                      values = [71, 72, 73, 74, 75, 76, 77];
+                      baseline = Array(7).fill(72);
+
+                    }
+                    else if (saAxis == 28) {
+                      times = ["1", "2", "3", "4", "5", "6", "7",
+                               "8", "9", "10", "11", "12", "13", "14",
+                               "15", "16", "17", "18", "19", "20", "21",
+                               "22", "23", "24", "25", "26", "27", "28"
+                               ];
+                      values = [71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77,
+                                71, 72, 73, 74, 75, 76, 77
+                                ];
+                      }
+                      baseline = Array(28).fill(72);
+
+
+                      var rows = [];
+
+                      for (i = 0; i < times.length; i++) {
+                        rows.push([times[i], values[i], baseline[i]]);
+                      }
+
+                      data.addRows(rows);
+
+                    // Set chart options
+                    var options = { legend: {'position':'top', 'alignment':'center'},
+                                    hAxis: {
+                                      title: 'Time',
+                                    },
+                                    vAxis: {
+                                      title: 'Social Score'
+                                    },
+                                  };
+
+
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.LineChart(document.getElementById('social-canvas'));
+                    chart.draw(data, options);
+                  }
+                    function socialAnim() {
+                      drawSocialActivity();
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 medium-6 columns"> <!--Pain-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Pain</h6>
+                  <select id="painAxis" onchange="painAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="left">
+                    <div>
+                      <p>
+                        Top 5 frequent pain points for <span = id="painTime_placeholder"></span>
+                        <ol>
+                          <li><span id="pain_1"></span></li>
+                          <li><span id="pain_2"></span></li>
+                          <li><span id="pain_3"></span></li>
+                          <li><span id="pain_4"></span></li>
+                          <li><span id="pain_5"></span></li>
+                        </ol>
+                      </p>
+                    </div>
+                  </div>
+                  <script>
+                    var painLocation = function () {
+                        var s = document.getElementById ('painAxis');
+                        var painAxis = s.options [s.selectedIndex].value;
+                        var temp;
+                        if (painAxis == 1) {
+                            temp = ["Right Foot", "Head", "Lower Back", "Left Thigh", "Right Hip"];
+                        }
+                        else if (painAxis == 7) {
+                            temp = ["Head", "Shoulders", "Knees", "and", "Toes"];
+                        }
+                        else if (painAxis == 28) {
+                            temp = ["Head", "Neck", "Right Arm", "Right Knee", "Right Thigh"]
+                        }
+                        return temp;
+                    };
+                    var painTime = function () {
+                      var timeValue;
+                      var s = document.getElementById ('painAxis');
+                      var painAxis = s.options [s.selectedIndex].value;
+
+                      if (painAxis == 1) {
+                        timeValue = "today";
+                      }
+                      else if (painAxis == 7) {
+                        timeValue = "the week";
+                      }
+                      else if (painAxis == 28) {
+                        timeValue = "28 days";
+                      }
+                      return timeValue;
+                    }
+
+
+                    function painAnim() {
+                      var pain = painLocation();
+                      var timeValue = painTime();
+                      document.getElementById('painTime_placeholder').innerHTML = timeValue;
+                      document.getElementById('pain_1').innerHTML = pain[0];
+                      document.getElementById('pain_2').innerHTML = pain[1];
+                      document.getElementById('pain_3').innerHTML = pain[2];
+                      document.getElementById('pain_4').innerHTML = pain[3];
+                      document.getElementById('pain_5').innerHTML = pain[4];
+
+                    }
+                    </script>
+                </div>
+              </div>
+              <div class="large-6 medium-6 columns"> <!--Medication-->
+                <div class="dash-widget">
+                  <h6 class="widget-title">Medication</h6>
+                  <select id="medAxis" onchange="medicationAnim()">
+                    <option value="1">Daily</option>
+                    <option value="7">7 days</option>
+                    <option value="28">28 days</option>
+                  </select>
+                  <div class= "footer" style="width:100%" align="center">
+                    <div id="med-canvas" height="300" width="400"></div>
+                  </div>
+          
+                  <script defer="true" type="text/javascript">
+                  // Load the Visualization API and the piechart package.
+                    //google.load('visualization', '1.0', {'packages':['corechart']});
+
+                    // Set a callback to run when the Google Visualization API is loaded.
+                    //google.setOnLoadCallback(drawMedChart);
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function getMedicationData (timeValue, handleResponse) {
+
+                      $.ajax({
+                        type: 'GET',
+                        url: 'http://128.2.20.131:50000/values/pillbox',
+                        aysnc: false,
+                        data: {get_param: 'value'},
+                        dataType: 'json',
+                        success: handleResponse
+                      });
+                   }
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawMedChart() {
+                      // alert ("called draw weight");
+                      var s = document.getElementById ('medAxis');
+                      var medAxis = s.options [s.selectedIndex].value;
+                    // Create the data table.              
+
+                      var medicationValues = [];
+                      getMedicationData(medAxis, function (data) {
+
+                        medicationValues = _.map(data,'value');
+                        tsArr =        _.map(data,'timestamp');
+                        console.log(medicationValues);
+                        console.log(tsArr);
+                        determineMedDims(weightAxis, medicationValues, tsArr);
+                      }); 
+                    }
+
+
+
+                    function determineMedDims(medAxis, medicationValues, tsArr) {
+
+                    // Create the data table.
+
+                      var data = new google.visualization.DataTable();
+                      data.addColumn('string', 'Time');
+                      data.addColumn('number', 'Pills');
+
+                      var times = [];
+                      var values = [];
+
+                      var s = document.getElementById ('medAxis');
+                      var medAxis = s.options [s.selectedIndex].value;
+
+                      if (medAxis == 1) {
+                        times = ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM",
+                                "4PM", "5PM", "6PM", "7PM", "8PM"];
+                        values = Array(13).fill(0);
+                        tsArr.forEach (function (entry) {
+                          var temp = new Date((entry || "").replace(/-/g,"/").replace(/[TZ]/g," "));
+                          values[temp.getHours() - 8] += 1; // minus 8 to adjust for the indices in times
+
+                        })
+                        console.log(values);
+                      }
+                      else if (medAxis == 7) {
+                        times = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+                        values = Array(7).fill(0);
+                        tsArr.forEach (function (entry) {
+                          var temp = new Date((entry || "").replace(/-/g,"/").replace(/[TZ]/g," "));
+                          values[temp.getDay()] += 1;
+
+                        })
+                        console.log(values);
+                      }
+                      else if (medAxis == 28) {
+                        times = ["1", "2", "3", "4", "5", "6", "7",
+                                 "8", "9", "10", "11", "12", "13", "14",
+                                 "15", "16", "17", "18", "19", "20", "21",
+                                 "22", "23", "24", "25", "26", "27", "28"
+                                 ];
+                        values = medicationValues.slice(0,28);
+                      }
+
+                      var rows = [];
+
+                      for (i = 0; i < times.length; i++) {
+                        rows.push([times[i], values[i]]);
+                      }
+
+                      data.addRows (rows);
+
+
+                    // Set chart options
+                    var options = { legend: {'position':'top', 'alignment':'center'},
+                                    hAxis: {
+                                      title: 'Time',
+                                    },
+                                    vAxis: {
+                                      title: 'Pills'
+                                    },
+                                  };
+
+
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.ColumnChart(document.getElementById('med-canvas'));
+                    chart.draw(data, options);
+                  }
+                    function medicationAnim() {
+                      drawMedChart();
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          <!--SAMPLE ONBOARDING - MOOD -->
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">x</span>
+                <h1 class="evnt-header">Tracking Mood</h1>
+                <div class="row small-uncollapse medium-uncollapse large-collapse">
+                  <div class="small-12 columns">
+                    <!-- <p class="evnt-p">Wednesday, April 13th, 2016, 3:00 PM - 5:00 PM</p> -->
+                    <p>Let's get started...</p>
+                    <p>Notify me when:</p>
+                    <input type="checkbox" name="pain1" value="pain1">&nbsp;Patient has felt
+                      <select>
+                        <option value="Mood">Mood</option>
+                        <option value="Bored">Bored</option>
+                        <option value="Sad">Sad</option>
+                        <option value="Hopeless">Hopeless</option>
+                        <option value="Tired">Tired</option>
+                        <option value="Frustrated">Frustrated</option>
+                      </select>
+                    for at least <select>
+                        <option value="days">&#35;</option>
+                        <option value="7">7</option>
+                        <option value="14">14</option>
+                        <option value="21">21</option>
+                        <option value="28">28</option>
+                      </select>days
+                    </input>
+                    <br/>
+                    <input type="checkbox" name="pain2" value="pain2" checked="checked">&nbsp;Patient has felt increasingly 
+                      <select>
+                        <option value="Mood">Mood</option>
+                        <option value="Bored">Bored</option>
+                        <option value="Sad">Sad</option>
+                        <option value="Hopeless">Hopeless</option>
+                        <option value="Tired">Tired</option>
+                        <option value="Frustrated">Frustrated</option>
+                      </select> for 
+                      <select>
+                        <option value="days">&#35;</option>
+                        <option value="7">7</option>
+                        <option value="14">14</option>
+                        <option value="21">21</option>
+                        <option value="28">28</option>
+                      </select> days overall
+                    </input>
+                    <br/>
+                    <input type="submit" value="Save" style="float: left;"></input>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vendor/jquery.sticky.js"></script>
+    <script src="Chart.js"></script>
+    <script type="text/javascript">
+          google.charts.load('current', {packages: ['corechart', 'timeline']});
+          google.charts.setOnLoadCallback(drawChart);
+          google.charts.setOnLoadCallback(drawMedChart);
+          google.charts.setOnLoadCallback(drawSocialActivity);
+          google.charts.setOnLoadCallback(drawPhysicalActivity);
+          
+          google.charts.setOnLoadCallback(drawWeight);
+
+    </script>
+  </body>
+</html>

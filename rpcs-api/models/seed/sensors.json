@@ -1,0 +1,40 @@
+[
+{
+	"name":"heart",
+	"fullname":"Heart Rate",
+	"description":"The amount of ambient light"
+	},
+{
+	"name":"meds",
+	"fullname":"Medication",
+	"description":"The amount of ambient light"
+	},
+{
+	"name":"lux",
+	"fullname":"Lumens",
+	"description":"The amount of ambient light"
+	},{
+	"name":"h",
+	"fullname":"Humidity",
+	"description":"The amount of ambient light"
+	},{
+	"name":"p",
+	"fullname":"Pressure",
+	"description":"The amount of ambient light"
+	},{
+	"name":"ch4",
+	"fullname":"Methane",
+	"description":"The amount of ambient light"
+	},{
+	"name":"lpg",
+	"fullname":"Butane",
+	"description":"The amount of ambient light"
+	},{
+	"name":"co",
+	"fullname":"Carbon Monoxide",
+	"description":"The amount of ambient light"
+	},{
+	"name":"t",
+	"fullname":"Temperature",
+	"description":"The amount of ambient light"
+	}]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src = "Chart.js"></script>
+
+  </head>
+  <body>
+
+<script>
+   var friendsArr = [];
+
+
+  function getEMA_Social()
+{
+    id2 = document.getElementById("id1");
+    strUser = id2.options[id2.selectedIndex].value;
+
+
+ if(strUser == "Week")
+ {
+  $.ajax({
+    type: 'GET',
+    url: 'http://128.2.20.131:50000/values/ema_friends',
+    data: { get_param: 'value' },
+    dataType: 'json',
+    success: function (data) {
+
+     $.each(data, function(index, element) {
+          friendsArr.push(element.value);
+
+
+        });
+
+    }
+
+});
+}
+function2();
+}
+  </script>
+   <select id="id1" onChange = "getEMA_Social()">
+    <option value="Week" selected>Week</option>
+    <option value="2 weeks">2 weeks</option>
+    <option value="Month">Month</option>
+    </select>
+
+   <canvas id="myChart" width="600" height="400"></canvas>
+    <button onClick = "function2()">Generate Chart</button>
+    <script>
+    function function2()
+  {
+    var data = {
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [
+                {
+            label: "Social Activity Visiting Friends",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [friendsArr[0], friendsArr[1], friendsArr[2], friendsArr[3],friendsArr[4],friendsArr[5],friendsArr[6]]
+        },
+
+    ]
+};
+
+
+
+if(friendsArr.length !=0)
+{
+var ctx = document.getElementById("myChart").getContext("2d");
+   var myBarChart = new Chart(ctx).Bar(data);
+}
+
+    }
+  </script>
+  </body>
+
+</html>
+

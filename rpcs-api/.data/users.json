@@ -1,0 +1,10 @@
+{"_id":{"$oid":"570ec6cc4784043b5285c3a4"},"first":"heart","last":"Heart Rate","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.628Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3a5"},"first":"meds","last":"Medication","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.635Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3a6"},"first":"lux","last":"Lumens","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.636Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3a7"},"first":"h","last":"Humidity","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.636Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3a8"},"first":"p","last":"Pressure","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.636Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3a9"},"first":"ch4","last":"Methane","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.637Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3aa"},"first":"lpg","last":"Butane","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.637Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3ab"},"first":"co","last":"Carbon Monoxide","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.637Z"},"__v":0}
+{"_id":{"$oid":"570ec6cc4784043b5285c3ac"},"first":"t","last":"Temperature","address":"The amount of ambient light","phone":"7072345555","timestamp":{"$date":"2016-04-13T22:23:08.637Z"},"__v":0}
+{"_id":{"$oid":"570edfd452c1463872628d6c"},"phone":"7072345555","address":"1000 Forbes Ave","last":"Abagnale Jr.","first":"Frank","timestamp":{"$date":"2016-04-14T00:09:56.135Z"},"__v":0}
